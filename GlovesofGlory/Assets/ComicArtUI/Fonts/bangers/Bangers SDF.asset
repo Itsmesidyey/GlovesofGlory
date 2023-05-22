@@ -118,9 +118,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
   m_Name: Bangers SDF
   m_EditorClassIdentifier: 
-  hashCode: -1935407223
+  hashCode: 2134875903
   material: {fileID: -3204214432481123534}
-  materialHashCode: 1013377161
+  materialHashCode: -2079879681
   m_Version: 1.1.0
   m_SourceFontFileGUID: 26ee04c254b5f2545be571001d3679af
   m_SourceFontFile_EditorRef: {fileID: 12800000, guid: 26ee04c254b5f2545be571001d3679af, type: 3}
