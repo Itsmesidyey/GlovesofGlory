@@ -3,6 +3,8 @@ using Shapes2D;
 using TMPro;
 using UnityEngine;
 
+
+
 namespace ComicUI
 {
     public abstract class ShapesAnim : MonoBehaviour
