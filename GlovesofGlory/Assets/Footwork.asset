@@ -15,6 +15,6 @@ MonoBehaviour:
   name: Foot work
   description: Increase your boxer's evasion, making it harder for the opponent to
     land punches.
-  artwork: {fileID: 0}
+  artwork: {fileID: 21300000, guid: 485dd58cbbfc8c54eb7403a9c75c6cfa, type: 3}
   energycost: 20
   damage: 0

@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Jab
   description: A quick, low-damage punch
-  artwork: {fileID: 21300000, guid: 1b46cae3352d5ef4a8178b7f76f1286a, type: 3}
+  artwork: {fileID: 21300000, guid: 9bbbfcc31d0ec9245b1cfce7168393ca, type: 3}
   energycost: 5
   damage: 10

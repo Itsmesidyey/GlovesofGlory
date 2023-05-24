@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Body Shot
   description: A targeted punch to the opponent's midsection, lowering their stamina
-  artwork: {fileID: 0}
+  artwork: {fileID: 21300000, guid: a7c5a50843d64034d94e8955dfbb2078, type: 3}
   energycost: 25
   damage: 30
