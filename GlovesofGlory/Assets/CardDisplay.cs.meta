@@ -4,7 +4,12 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - card: {fileID: 11400000, guid: 47dfe173053b51449bc00439222685d6, type: 2}
+  - card: {fileID: 11400000, guid: fa20098230df0ed49b9718242d0a5f69, type: 2}
+  - nameText: {instanceID: 0}
+  - descriptionText: {instanceID: 0}
+  - artworkImage: {instanceID: 0}
+  - energycostText: {instanceID: 0}
+  - damageText: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
