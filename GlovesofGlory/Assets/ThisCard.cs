@@ -16,10 +16,10 @@ public class ThisCard : MonoBehaviour
     public int power;
     public string cardDescription;
 
-    public TMP_Text Name;
-    public TMP_Text Energy;
-    public TMP_Text Damage;
-    public TMP_Text Description;
+    public TMP_Text nameText;
+    public TMP_Text costText;
+    public TMP_Text powerText;
+    public TMP_Text descriptionText;
 
     public Sprite thisSprite;
     public Image thatImage;
@@ -33,8 +33,7 @@ public class ThisCard : MonoBehaviour
 
     void Update()
     {
-        if (thisCard.Count > 0)
-        {
+        
             id = thisCard[0].id;
             cardName = thisCard[0].cardName;
             cost = thisCard[0].cost;
@@ -42,12 +41,12 @@ public class ThisCard : MonoBehaviour
             cardDescription = thisCard[0].cardDescription;
 
             thisSprite =thisCard[0].thisImage;
-        }
+        
 
-        Name.text = "" + cardName;
-        Energy.text = "" + cost;
-        Damage.text = "" + power;
-        Description.text = "" + cardDescription;
+        nameText.text = "" + cardName;
+        costText.text = "" + cost;
+        powerText.text = "" + power;
+        descriptionText.text = "" + cardDescription;
 
         thatImage.sprite = thisSprite;
     }
