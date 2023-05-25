@@ -20,6 +20,11 @@ public class ThisCard : MonoBehaviour
     public Text costText;
     public Text powerText;
     public Text descriptionText;
+
+    public Sprite thisSprite;
+    public Image thatImage;
+
+    public Image frame;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,9 +41,29 @@ public class ThisCard : MonoBehaviour
         power =thisCard[0].power;
         cardDescription =thisCard[0].cardDescription;
 
+        thisSprite =thisCard[0].thisImage;
+
         nameText.text = ""+cardName;
         costText.text = ""+cost;
         powerText.text = ""+power;
         descriptionText.text = " "+cardDescription;
+
+        thatImage.sprite = thisSprite;
+
+        if(thisCard[0].color=="Red"){
+            frame.GetComponent<Image>().color=new Color32(255,0,0,255);
+        }
+
+        if(thisCard[0].color=="Blue"){
+            frame.GetComponent<Image>().color=new Color32(0,0,255,255);
+        }
+
+        if(thisCard[0].color=="Yellow"){
+            frame.GetComponent<Image>().color=new Color32(255,255,0,255);
+        }
+
+        if(thisCard[0].color=="Purple"){
+            frame.GetComponent<Image>().color=new Color32(255,0,255,255);
+        }
     }
 }
