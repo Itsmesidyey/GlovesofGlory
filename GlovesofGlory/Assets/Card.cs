@@ -12,7 +12,8 @@ public class Card
     public int cost;
     public int power;
     public string cardDescription;
-    public Sprite thisImage;
+  
+    public Sprite ThisImage;
 
     public Card(){
 
@@ -25,7 +26,7 @@ public class Card
         power = Power;
         cardDescription = CardDescription;
 
-        thisImage = ThisImage;
+       ThisImage = ThisImage;
     }
    
 }
