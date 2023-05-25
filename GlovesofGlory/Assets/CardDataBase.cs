@@ -8,10 +8,10 @@ public class CardDataBase : MonoBehaviour
 public static List<Card> cardList = new List<Card> ();
 
 void Awake(){
-    cardList.Add (new Card(0, "None", 0, 0, "None"));
-    cardList.Add (new Card(1, "jab1", 2, 1000, "asd"));
-    cardList.Add (new Card(2, "jab2", 3, 1000, "dsa"));
-    cardList.Add (new Card(3, "jab3", 5, 1000, "ss"));
-    cardList.Add (new Card(4, "jab4", 1, 1000, "aa"));
+    cardList.Add (new Card(0, "Block", 35, 0, "Reduce damage taken from the next opponent's punch", Resources.Load <Sprite>("0")));
+    cardList.Add (new Card(1, "Body Shot", 2, 30, "A targeted punch to the opponent's midsection, lowering their stamina", Resources.Load <Sprite>("13")));
+    cardList.Add (new Card(2, "Counter Punch", 30, 35, "A defensive move that can be played in response to an opponent's attack", Resources.Load <Sprite>("3")));
+    cardList.Add (new Card(3, "Cross", 10, 15, "A powerful straight punch", Resources.Load <Sprite>("10")));
+    cardList.Add (new Card(4, "Hook", 15, 20, "A strong punch with the potential to stagger the opponent", Resources.Load <Sprite>("14")));
 }
 }

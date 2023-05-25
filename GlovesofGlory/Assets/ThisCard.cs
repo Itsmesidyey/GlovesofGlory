@@ -21,6 +21,9 @@ public class ThisCard : MonoBehaviour
     public TMP_Text Damage;
     public TMP_Text Description;
 
+    public Sprite thisSprite;
+    public Image thatImage;
+
     void Start()
     {
         if (CardDataBase.cardList.Count > 0)
@@ -38,11 +41,15 @@ public class ThisCard : MonoBehaviour
             cost = thisCard[0].cost;
             power = thisCard[0].power;
             cardDescription = thisCard[0].cardDescription;
+
+            thisSprite =thisCard[0].thisImage;
         }
 
         Name.text = "" + cardName;
         Energy.text = "" + cost;
         Damage.text = "" + power;
         Description.text = "" + cardDescription;
+
+        thatImage.sprite = thisSprite;
     }
 }
