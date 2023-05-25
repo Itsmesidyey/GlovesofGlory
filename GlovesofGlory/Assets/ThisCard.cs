@@ -26,10 +26,9 @@ public class ThisCard : MonoBehaviour
 
     void Start()
     {
-        if (CardDataBase.cardList.Count > 0)
-        {
-            thisCard.Add(CardDataBase.cardList[thisId]);
-        }
+        
+        thisCard [0] = CardDataBase.cardList[thisId];
+        
     }
 
     void Update()
