@@ -2,21 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Card", menuName = "Card")]
-
-public class Card : ScriptableObject
+public class Card : MonoBehaviour
 {
-    public new string name;
-    public string description;
 
-    public Sprite artwork;
+    public int id;
+    public string cardName;
+    public int cost;
+    public int power;
+    public string cardDescription;
 
-    public int energycost;
-    public int damage;
+    public Card(){
 
-    public void Print ()
-    {
-        Debug.Log(name + ": " + description + " The card cost: " + energycost);
     }
 
+    public Card(int Id, string CardName, int Cost, int Power, string CardDescription){
+        id = Id;
+        cardName = CardName;
+        cost = Cost;
+        power = Power;
+        cardDescription = CardDescription;
+    }
+   
 }
