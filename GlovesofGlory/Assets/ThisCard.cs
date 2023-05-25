@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using TMPro;
+
 public class ThisCard : MonoBehaviour
 {
     public List<Card> thisCard = new List<Card>();
@@ -14,10 +16,10 @@ public class ThisCard : MonoBehaviour
     public int power;
     public string cardDescription;
 
-    public Text nameText;
-    public Text costText;
-    public Text powerText;
-    public Text descriptionText;
+    public TMP_Text Name;
+    public TMP_Text Energy;
+    public TMP_Text Damage;
+    public TMP_Text Description;
 
     void Start()
     {
@@ -38,9 +40,9 @@ public class ThisCard : MonoBehaviour
             cardDescription = thisCard[0].cardDescription;
         }
 
-        nameText.text = "" + cardName;
-        costText.text = "" + cost;
-        powerText.text = "" + power;
-        descriptionText.text = "" + cardDescription;
+        Name.text = "" + cardName;
+        Energy.text = "" + cost;
+        Damage.text = "" + power;
+        Description.text = "" + cardDescription;
     }
 }
