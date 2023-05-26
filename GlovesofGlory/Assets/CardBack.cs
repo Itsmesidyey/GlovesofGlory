@@ -13,13 +13,8 @@ public class CardBack : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        if(ThisCard.staticCardBack == true){
-
-            cardBack.SetActive(true);
-        }else{
-            cardBack.SetActive(false);
-        }
-    }
+    public void UpdateCard (bool updown)
+{
+        cardBack.SetActive(updown);
+}
 }

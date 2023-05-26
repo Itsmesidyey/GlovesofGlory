@@ -15,6 +15,7 @@ public class ThisCard : MonoBehaviour
     public int cost;
     public int power;
     public string cardDescription;
+    public GameObject Card;
 
     public Text nameText;
     public Text costText;
@@ -27,10 +28,12 @@ public class ThisCard : MonoBehaviour
     public Image frame;
 
     public bool cardBack;
-    public static bool staticCardBack;
+    CardBack CardBackScript;
     // Start is called before the first frame update
     void Start()
     {
+
+        CardBackScript = GetComponent<CardBack>();
         thisCard [0] = CardDataBase.cardList[thisId];
 
     }
@@ -68,6 +71,6 @@ public class ThisCard : MonoBehaviour
         if(thisCard[0].color=="Purple"){
             frame.GetComponent<Image>().color=new Color32(255,0,255,255);
         }
-        staticCardBack = cardBack;
+        CardBackScript.UpdateCard(cardBack);
     }
 }
