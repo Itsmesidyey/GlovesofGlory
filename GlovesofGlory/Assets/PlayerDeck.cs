@@ -32,23 +32,26 @@ public class PlayerDeck : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(deckSize<30){
-            cardInDeck1.SetActive (false);
-        }
-        if(deckSize<20){
-            cardInDeck1.SetActive (false);
-        }
-        if(deckSize<20){
-            cardInDeck1.SetActive (false);
-        }
-        if(deckSize<30){
-            cardInDeck1.SetActive (false);
-        }
+       if(deckSize<30){
+            cardInDeck1.SetActive(false);
+       }
+
+       if(deckSize<20){
+            cardInDeck2.SetActive(false);
+       }
+
+       if(deckSize<2){
+            cardInDeck3.SetActive(false);
+       }
+
+       if(deckSize<1){
+            cardInDeck4.SetActive(false);
+       }
     }
 
     public void Shuffle()
 {
-    container.Add(null); // Add a null element to the container list
+    
     for (int i = 0; i < deckSize; i++)
     {
         container[0] = deck[i];
