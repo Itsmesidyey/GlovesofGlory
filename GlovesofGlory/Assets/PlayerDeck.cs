@@ -7,6 +7,8 @@ public class PlayerDeck : MonoBehaviour
 
     public List<Card> deck = new List<Card> ();
     public List<Card> container = new List<Card> ();
+    public static List<Card> staticDeck = new List<Card> ();
+
 
     public int x;
     public int deckSize;
@@ -15,6 +17,11 @@ public class PlayerDeck : MonoBehaviour
     public GameObject cardInDeck2;
     public GameObject cardInDeck3;
     public GameObject cardInDeck4;
+
+    public GameObject CardBack;
+    public GameObject Deck;
+
+    public GameObject[] Clones;
     
     // Start is called before the first frame update
     void Start()
@@ -49,6 +56,15 @@ public class PlayerDeck : MonoBehaviour
        }
     }
 
+    IEnumerator Example(){
+        yield return new WaitForSeconds(1);
+        Clones = GameObject.FindGameObjectsWithTag("Clone");
+
+        foreach(GameObject Clone in Clones){
+            Destroy(Clone);
+        }
+    }
+
     public void Shuffle()
 {
     
@@ -59,5 +75,12 @@ public class PlayerDeck : MonoBehaviour
         deck[i] = deck[randomIndex];
         deck[randomIndex] = container[0];
     }
+
+    Instantiate(CardBack, transform.position, transform.rotation);
+    StartCoroutine(Example());
 }
+    
+
+
+
 }

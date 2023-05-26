@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 
 public class ThisCard : MonoBehaviour
 {
-
+    public PlayerDeck playerDeck;
     public List<Card> thisCard = new List<Card> ();
     public int thisId;
 
@@ -29,18 +29,30 @@ public class ThisCard : MonoBehaviour
 
     public bool cardBack;
     CardBack CardBackScript;
+    
+    public GameObject Hand;
+
+    public int numberOfCardsInDeck;
     // Start is called before the first frame update
     void Start()
     {
 
         CardBackScript = GetComponent<CardBack>();
         thisCard [0] = CardDataBase.cardList[thisId];
-
+       playerDeck = FindObjectOfType<PlayerDeck>();
+        numberOfCardsInDeck = playerDeck.deckSize;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        Hand = GameObject.Find("Hand");
+        if(this.transform.parent == Hand.transform.parent){
+
+            cardBack = false;
+        }
+
         id =thisCard[0].id;
         cardName = thisCard[0].cardName;
         cost =thisCard[0].cost;
@@ -72,5 +84,7 @@ public class ThisCard : MonoBehaviour
             frame.GetComponent<Image>().color=new Color32(255,0,255,255);
         }
         CardBackScript.UpdateCard(cardBack);
+
+       
     }
 }
